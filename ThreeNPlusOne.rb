@@ -1,11 +1,11 @@
 class ThreeNPlusOne
   attr_reader :maximum_cycle_length, :mcl_number, :min, :max
   def initialize min, max
-    @min = min
-    @max = max
-    @maximum_cycle_length = get_cycle_length min
+    @min = min.to_i
+    @max = max.to_i
+    @maximum_cycle_length = get_cycle_length @min
     @mcl_number = min
-    max_cycle_length_between min, max
+    max_cycle_length_between @min, @max
   end
 
   def get_cycle_length n
@@ -37,12 +37,19 @@ class ThreeNPlusOne
 
 end
 
-puts ThreeNPlusOne.new(1,10).output
-puts ThreeNPlusOne.new(100,200).output
-puts ThreeNPlusOne.new(201,210).output
-puts ThreeNPlusOne.new(900,1000).output
+def solve_series series
+  series.split("\n").each do |l|
+    next if l.empty?
+    line_numbers = l.split(' ')
+    puts ThreeNPlusOne.new(line_numbers.first, line_numbers.last).output
+  end
+end
 
+sample_input = """
+1 10
+100 200
+201 210
+900 1000
+"""
 
-
-
-
+solve_series sample_input

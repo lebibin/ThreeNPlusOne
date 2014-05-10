@@ -4,7 +4,7 @@
 
 Problems in Computer Science are often classified as belonging to a certain class of problems (e.g., NP, Unsolvable, Recursive). In this problem you will be analyzing a property of an algorithm whose classification is not known for all possible inputs.
 
-# The Problem
+## The Problem
 
 Consider the following algorithm:
 
