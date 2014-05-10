@@ -4,7 +4,7 @@ class ThreeNPlusOne
     @min = min.to_i
     @max = max.to_i
     @maximum_cycle_length = get_cycle_length @min
-    @mcl_number = min
+    @mcl_number = @min
     max_cycle_length_between @min, @max
   end
 
